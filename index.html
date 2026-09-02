@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CoffeeLab Journal — Privacy Policy</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #fbf9f7;
+    --card: #ffffff;
+    --ink: #1c1a18;
+    --muted: #5f5952;
+    --rule: #e6e0d9;
+    --accent: #7b4b28;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16130f;
+      --card: #201c18;
+      --ink: #f2ede7;
+      --muted: #a9a099;
+      --rule: #332c25;
+      --accent: #d9a273;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 2.5rem 1.25rem 5rem;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  main { max-width: 44rem; margin: 0 auto; }
+  h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 .35rem; letter-spacing: -.02em; }
+  h2 {
+    font-size: 1.15rem; margin: 2.5rem 0 .6rem;
+    padding-top: 1.4rem; border-top: 1px solid var(--rule);
+    letter-spacing: -.01em;
+  }
+  h3 { font-size: 1rem; margin: 1.5rem 0 .4rem; }
+  .updated { color: var(--muted); font-size: .9rem; margin: 0 0 2rem; }
+  .lede {
+    background: var(--card); border: 1px solid var(--rule);
+    border-radius: 12px; padding: 1.1rem 1.25rem; margin: 0 0 1rem;
+  }
+  .lede p:first-child { margin-top: 0; }
+  .lede p:last-child { margin-bottom: 0; }
+  ul { padding-left: 1.15rem; }
+  li { margin: .4rem 0; }
+  a { color: var(--accent); }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: .88em; background: var(--card);
+    border: 1px solid var(--rule); border-radius: 5px; padding: .1em .35em;
+  }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .94rem; }
+  th, td { text-align: left; padding: .6rem .7rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  th { font-weight: 600; }
+  .wrap { overflow-x: auto; }
+  footer { margin-top: 3rem; padding-top: 1.4rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .9rem; }
+</style>
+</head>
+<body>
+<main>
+
+<h1>CoffeeLab Journal — Privacy Policy</h1>
+<p class="updated">Last updated 2 September 2026</p>
+
+<div class="lede">
+  <p><strong>The short version.</strong> CoffeeLab Journal is a personal coffee
+  journal. Everything you log — your coffees, ratings, tasting notes, photos and
+  brews — stays on your device and in your own iCloud account. I cannot see any
+  of it.</p>
+  <p>There is exactly one thing the app can send me, and only if you switch it
+  on: an anonymous summary of your taste. It is off by default, you can read the
+  exact data before you agree, and you can delete it at any time from inside the
+  app.</p>
+</div>
+
+<h2>Who is responsible</h2>
+<p>The data controller for this app is <strong>Ömer Tarik Özyilmaz</strong>, an
+individual developer. You can reach me about anything on this page, including
+any request about your data, at
+<strong>otozyilmaz@gmail.com</strong>.</p>
+
+<h2>What stays on your device</h2>
+<p>Almost all of it. The app is built around a local database that syncs through
+<strong>your own iCloud account</strong> using Apple's CloudKit private database.
+Data in a private database is accessible only to you — as the developer I have no
+technical means of reading it, and I never receive a copy.</p>
+<p>This includes:</p>
+<ul>
+  <li>Your coffees, roasters, origins, processes, roast dates and prices</li>
+  <li>Your ratings, tasting notes, photos and videos</li>
+  <li>Every brew you log, including recipes, timings and equipment</li>
+  <li>Your caffeine log and any drinks you record while out</li>
+  <li>Your achievements, streaks and settings</li>
+</ul>
+<p>If you delete the app or turn off iCloud, that data goes with it. You can
+export a full backup file at any time from Settings.</p>
+
+<h3>Health data</h3>
+<p>With your permission, the app reads <strong>sleep</strong> from Apple Health
+so it can compare its caffeine projections against how you actually slept, and
+writes the <strong>caffeine</strong> from drinks you log back into Health. This
+exchange happens entirely on your device between the app and Apple Health. Health
+data is never transmitted anywhere, is not included in the optional taste
+sharing described below, and you can revoke access at any time in the Health app.
+The app works without Health access.</p>
+
+<h2>The one thing you can choose to share</h2>
+<p>The app's distinctive feature is a <em>taste vector</em>: a standardised
+summary of what your ratings say you like. It is computed on your device from
+your own library.</p>
+<p>If — and only if — you turn on <strong>Contribute my ratings</strong> in
+Settings, the app sends that summary to a server I operate, so that palates can
+be grouped into archetypes and the app can eventually tell you what people with
+your taste also enjoy.</p>
+
+<h3>Exactly what is sent</h3>
+<div class="wrap">
+<table>
+  <tr><th>Field</th><th>What it is</th></tr>
+  <tr><td>The vector</td><td>A number per flavour family, process, origin region and roast level, saying how much more or less than <em>your own average</em> you rate that category</td></tr>
+  <tr><td>Support counts</td><td>How many coffees back each number, so thin evidence can be weighted down</td></tr>
+  <tr><td>Rated count</td><td>How many coffees you have rated in total</td></tr>
+  <tr><td>Your mean and spread</td><td>Your average rating and its variability, rounded, so the standardisation can be checked</td></tr>
+  <tr><td>Install identifier</td><td>A random identifier generated on your device (see below)</td></tr>
+  <tr><td>App version</td><td>Which build produced the vector</td></tr>
+</table>
+</div>
+<p>You can see the literal data before deciding: <strong>Settings → Share
+ratings → Show me the payload</strong> displays the exact bytes that would be
+sent.</p>
+
+<h3>What is never sent</h3>
+<ul>
+  <li>Your name, email address, Apple ID or any account identifier</li>
+  <li>Coffee names, roaster names, your tasting notes, photos or videos</li>
+  <li>Your individual ratings — only the standardised summary derived from them</li>
+  <li>Your location, the cafés you visit, or any device identifier</li>
+  <li>Any health or sleep data</li>
+  <li>Your brew logs, timings or caffeine history</li>
+</ul>
+
+<h3>The install identifier</h3>
+<p>The summary is submitted with a random identifier created on your device the
+first time it is needed. It is <strong>not</strong> derived from your hardware,
+your Apple ID, or Apple's advertising or vendor identifiers, and it is not shared
+with anyone. Its only purpose is to let the server replace your previous summary
+rather than counting your palate twice.</p>
+<p>When you turn sharing off, or use the delete button, the identifier is
+discarded and a new one generated. Anything you choose to share afterwards
+therefore cannot be linked to what you shared before.</p>
+
+<h3>Legal basis, and taking it back</h3>
+<p>The lawful basis for this processing is your <strong>consent</strong> under
+Article 6(1)(a) GDPR. Consent is entirely optional: the app is fully functional
+without it, and nothing is withheld from you for declining.</p>
+<p>You can withdraw at any time in <strong>Settings → Share ratings</strong>,
+either by switching the toggle off or by tapping <strong>Delete what I've
+shared</strong>. Either action deletes your summary from the server. Withdrawing
+is as easy as giving consent, and does not affect the lawfulness of processing
+before you withdrew.</p>
+
+<h3>How long it is kept</h3>
+<p>The server holds <strong>one summary per install</strong>, replaced whenever
+your taste meaningfully changes — not a history. It is kept until you delete it
+or until the research it supports ends, after which the data set is deleted. No
+automated decision-making or profiling with legal effects is performed on it.</p>
+
+<h2>Optional AI features</h2>
+<p>The app can explain its predictions in plain language. By default this runs
+entirely on your device using Apple's built-in on-device model, and nothing is
+transmitted.</p>
+<p>You may optionally supply <strong>your own</strong> API key for Anthropic or
+OpenAI to use a cloud model instead. If you do, the text of your question and a
+summary of your taste are sent directly from your device to that provider under
+your own account, governed by their privacy policy — not mine. I do not receive
+that traffic, and I never see your key, which is stored in your device's
+Keychain. This is off unless you enter a key yourself.</p>
+
+<h2>Importing a coffee from a web address</h2>
+<p>If you paste a roaster's product page into the app to fill in a coffee's
+details, your device fetches that page directly from that roaster's website. That
+website will see the request as it would any visit. Nothing about you or your
+library is sent to it.</p>
+
+<h2>Beta testing through TestFlight</h2>
+<p>While the app is distributed through TestFlight, Apple processes some data
+about your participation, and as the developer I can see it in App Store Connect:</p>
+<ul>
+  <li>The email address you used to accept the TestFlight invitation</li>
+  <li>Crash reports and basic engagement metrics such as session counts</li>
+  <li>Any feedback or screenshots you choose to submit through TestFlight</li>
+</ul>
+<p>This is separate from anything the app itself sends, and is governed by
+<a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>. I use
+it only to fix problems and to contact testers about the beta. I do not combine
+it with taste summaries — and could not, since those carry no identifier that
+could be matched to a person.</p>
+
+<h2>What this app does not do</h2>
+<ul>
+  <li><strong>No advertising and no ad networks.</strong></li>
+  <li><strong>No analytics or tracking SDKs.</strong> There is no third-party
+      analytics code in the app at all.</li>
+  <li><strong>No tracking across apps or websites</strong>, and no data is
+      shared with data brokers.</li>
+  <li><strong>Nothing is sold.</strong> Not now, and a change of that kind would
+      require asking you again.</li>
+</ul>
+
+<h2>Your rights</h2>
+<p>Under the GDPR you have the right to access, rectify, erase, restrict and port
+your data, and to object to processing. Because virtually everything the app
+holds lives on your own device and in your own iCloud account, you already
+exercise most of these directly: you can view, edit, export and delete any of it
+in the app at any time.</p>
+<p>For the taste summary, the delete button in Settings is an immediate erasure.
+If you would prefer to ask me instead, or want to exercise any other right,
+write to otozyilmaz@gmail.com and I will respond within one month.</p>
+<p>If you believe I have handled your data improperly, you may complain to your
+national data protection authority. In the Netherlands this is the
+<a href="https://autoriteitpersoonsgegevens.nl/">Autoriteit Persoonsgegevens</a>.</p>
+
+<h2>Children</h2>
+<p>This app is not directed at children and does not knowingly collect any data
+from them.</p>
+
+<h2>Changes to this policy</h2>
+<p>If this policy changes in a way that affects what leaves your device, the date
+at the top will change and the app will ask for your consent again rather than
+relying on the consent you gave to an earlier version.</p>
+
+<footer>
+  CoffeeLab Journal · This policy describes the app as of the date above.
+</footer>
+
+</main>
+</body>
+</html>
