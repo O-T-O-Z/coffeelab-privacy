@@ -151,9 +151,37 @@ first time it is needed. It is <strong>not</strong> derived from your hardware,
 your Apple ID, or Apple's advertising or vendor identifiers, and it is not shared
 with anyone. Its only purpose is to let the server replace your previous summary
 rather than counting your palate twice.</p>
+<p>It is stored in your iCloud Keychain, so your own devices share one
+identifier. That is what makes "counted once" true: your coffees sync between
+your iPhone and iPad, and without a shared identifier the same palate would
+arrive twice and be counted as two people. It travels only between your devices,
+end-to-end encrypted by Apple, and it means the identifier can outlive
+reinstalling the app on a device signed into the same Apple Account. Deleting
+what you have shared replaces it everywhere.</p>
 <p>When you turn sharing off, or use the delete button, the identifier is
 discarded and a new one generated. Anything you choose to share afterwards
 therefore cannot be linked to what you shared before.</p>
+
+<h3>Proving a submission came from a real device</h3>
+<p>Each submission is signed using <strong>Apple App Attest</strong>, and the
+server stores the resulting key identifier alongside your install identifier.
+This is what stops one person creating thousands of invented palates and
+distorting the result for everyone, and what stops anyone editing or deleting a
+summary that is not theirs.</p>
+<p>The attestation key is created by your device for this app alone. It is not a
+device fingerprint: it cannot be linked to other apps, it does not survive
+reinstalling the app, and Apple does not tell the server anything about you. It
+is deleted together with your summary when you use the delete button, so no
+record of the pairing is kept afterwards.</p>
+
+<h3>How long it is kept</h3>
+<p>Your shared summary is kept until you delete it, or until the version of the
+taste schema it was collected under is retired — whichever comes first. A
+retired schema means the numbers no longer describe the same thing, so the old
+rows are deleted rather than migrated: a summary nobody can interpret is not
+worth keeping.</p>
+<p>Nothing here is archived, backed up to a third party, or exported. There is
+one database, on one machine, and deleting is deleting.</p>
 
 <h3>Legal basis, and taking it back</h3>
 <p>The lawful basis for this processing is your <strong>consent</strong> under
