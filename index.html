@@ -66,7 +66,7 @@
 <main>
 
 <h1>CoffeeLab Journal — Privacy Policy</h1>
-<p class="updated">Last updated 2 September 2026</p>
+<p class="updated">Last updated 12 September 2026</p>
 
 <div class="lede">
   <p><strong>The short version.</strong> CoffeeLab Journal is a personal coffee
@@ -138,7 +138,10 @@ sent.</p>
 <h3>What is never sent</h3>
 <ul>
   <li>Your name, email address, Apple ID or any account identifier</li>
-  <li>Coffee names, roaster names, your tasting notes, photos or videos</li>
+  <li>Coffee names, roaster names, your tasting notes, photos or videos. (If you
+      separately turn on the per-coffee sharing described below, a scrambled
+      code standing for a roaster and coffee name is sent — never the names
+      themselves.)</li>
   <li>Your individual ratings — only the standardised summary derived from them</li>
   <li>Your location, the cafés you visit, or any device identifier</li>
   <li>Any health or sleep data</li>
@@ -199,6 +202,67 @@ your taste meaningfully changes — not a history. It is kept until you delete i
 or until the research it supports ends, after which the data set is deleted. No
 automated decision-making or profiling with legal effects is performed on it.</p>
 
+<h2>The second thing you can choose to share</h2>
+<p>A taste vector describes <em>you</em>. It cannot say anything about one
+particular bag of coffee, because a phone has only ever seen one person drink
+it. The single most useful thing a prediction can have is how a specific coffee
+has gone for everybody else who drank it, and that is a different question with
+a different answer, so it is a <strong>separate decision</strong> with its own
+switch: <strong>Share which coffees I rated</strong>, in Settings → Share
+ratings. It is off unless you turn it on, and turning on the palate sharing
+above does not turn this on.</p>
+<p>It is separate because it deserves to be. A list of the coffees somebody
+drinks is closer to a fingerprint of them than a summary of their palate is, and
+rolling the two together would be exactly the kind of quiet widening this policy
+exists to rule out.</p>
+
+<h3>Exactly what is sent</h3>
+<div class="wrap">
+<table>
+  <tr><th>Field</th><th>What it is</th></tr>
+  <tr><td>A coffee code</td><td>A SHA-256 hash of the roaster and coffee name, lowercased and stripped of punctuation, computed on your device. The names themselves never leave it.</td></tr>
+  <tr><td>A standardised score</td><td>How far above or below <em>your own average</em> you rated that coffee, clamped to a sensible range. Never the score out of ten you gave.</td></tr>
+  <tr><td>Install identifier</td><td>The same random identifier described above, so your own entry can be replaced rather than duplicated — and so it can be excluded from the average shown to you.</td></tr>
+</table>
+</div>
+<p>Coffees with no roaster are never sent at all: "Ethiopia" from two different
+shops is not the same coffee, and pretending otherwise would pool strangers'
+opinions of unrelated lots.</p>
+<p>An honest note about the hash. It is not a promise of unlinkability: the
+input is a roaster and a coffee name, which is low-entropy, and somebody
+determined with a list of roasters could rebuild a dictionary of it. What it
+does buy is that no free text you typed is ever stored, and that a bag with a
+personal name on it does not land in a database as that string.</p>
+
+<h3>What comes back, and what it protects</h3>
+<p>The app asks the server what other people made of the coffees on your shelf.
+Two rules govern the answer:</p>
+<ul>
+  <li><strong>Five other people, or nothing.</strong> An average is returned only
+      once at least five <em>other</em> people have rated that same coffee.
+      Below that, the server returns nothing at all.</li>
+  <li><strong>You are never shown yourself.</strong> Your own rating is excluded
+      from any average you are shown, so a coffee you rated highly cannot come
+      back as "everybody loves this".</li>
+</ul>
+<p>Reading those averages requires no identifier and no attestation. If you have
+not turned on the sharing above, the app asks without identifying you at all.</p>
+
+<h3>Legal basis, taking it back, and how long it is kept</h3>
+<p>The lawful basis is again your <strong>consent</strong> under Article 6(1)(a)
+GDPR, given separately from the consent above. Turning the switch off deletes
+what was sent — not merely stops sending more — and deleting your taste summary
+deletes these rows with it. The server holds one entry per coffee per install,
+replaced when your rating changes, and keeps it until you delete it.</p>
+
+<h2>The camera</h2>
+<p>The app can read a coffee bag's label through the camera, either from a photo
+or continuously from the live preview. All of that happens <strong>on your
+device</strong>, using Apple's built-in text recognition, and optionally Apple's
+on-device language model to tidy up what was read. No image and no frame is
+uploaded anywhere, and the photo you keep is stored with the bag like any other
+photo in the app.</p>
+
 <h2>Optional AI features</h2>
 <p>The app can explain its predictions in plain language. By default this runs
 entirely on your device using Apple's built-in on-device model, and nothing is
@@ -247,7 +311,8 @@ your data, and to object to processing. Because virtually everything the app
 holds lives on your own device and in your own iCloud account, you already
 exercise most of these directly: you can view, edit, export and delete any of it
 in the app at any time.</p>
-<p>For the taste summary, the delete button in Settings is an immediate erasure.
+<p>For the taste summary, the delete button in Settings is an immediate erasure,
+and switching either sharing option off erases what that option had sent.
 If you would prefer to ask me instead, or want to exercise any other right,
 write to otozyilmaz@gmail.com and I will respond within one month.</p>
 <p>If you believe I have handled your data improperly, you may complain to your
