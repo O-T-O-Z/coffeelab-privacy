@@ -66,17 +66,20 @@
 <main>
 
 <h1>CoffeeLab Journal — Privacy Policy</h1>
-<p class="updated">Last updated 12 September 2026</p>
+<p class="updated">Last updated 31 October 2026</p>
 
 <div class="lede">
   <p><strong>The short version.</strong> CoffeeLab Journal is a personal coffee
   journal. Everything you log — your coffees, ratings, tasting notes, photos and
   brews — stays on your device and in your own iCloud account. I cannot see any
   of it.</p>
-  <p>There is exactly one thing the app can send me, and only if you switch it
-  on: an anonymous summary of your taste. It is off by default, you can read the
-  exact data before you agree, and you can delete it at any time from inside the
-  app.</p>
+  <p>There are exactly two things the app can send me, and only if you switch
+  them on: an anonymous summary of your taste, and which coffees you rated. Each
+  has its own switch, both are off by default, and you can delete what you shared
+  at any time from inside the app.</p>
+  <p>The app also fetches public information for you, such as roasters' shop
+  pages and exchange rates. Those requests carry nothing about you; they are
+  listed under <a href="#fetches">What the app fetches for you</a>.</p>
 </div>
 
 <h2>Who is responsible</h2>
@@ -100,6 +103,8 @@ technical means of reading it, and I never receive a copy.</p>
 </ul>
 <p>If you delete the app or turn off iCloud, that data goes with it. You can
 export a full backup file at any time from Settings.</p>
+<p>A Bluetooth scale talks to the app directly, and your Apple Watch gets its
+brews and timers straight from your iPhone. Neither goes through a server.</p>
 
 <h3>Health data</h3>
 <p>With your permission, the app reads <strong>sleep</strong> from Apple Health
@@ -114,8 +119,8 @@ The app works without Health access.</p>
 <p>The app's distinctive feature is a <em>taste vector</em>: a standardised
 summary of what your ratings say you like. It is computed on your device from
 your own library.</p>
-<p>If — and only if — you turn on <strong>Contribute my ratings</strong> in
-Settings, the app sends that summary to a server I operate, so that palates can
+<p>If — and only if — you turn on <strong>Share my taste profile</strong> in
+Settings → Share ratings, the app sends that summary to a server I operate, so that palates can
 be grouped into archetypes and the app can eventually tell you what people with
 your taste also enjoy.</p>
 
@@ -178,11 +183,13 @@ is deleted together with your summary when you use the delete button, so no
 record of the pairing is kept afterwards.</p>
 
 <h3>How long it is kept</h3>
-<p>Your shared summary is kept until you delete it, or until the version of the
-taste schema it was collected under is retired — whichever comes first. A
-retired schema means the numbers no longer describe the same thing, so the old
+<p>The server holds <strong>one summary per install</strong>, replaced whenever
+your taste meaningfully changes, not a history. It is kept until you delete it,
+until the version of the taste schema it was collected under is retired, or
+until the research it supports ends, whichever comes first. A retired schema means the numbers no longer describe the same thing, so the old
 rows are deleted rather than migrated: a summary nobody can interpret is not
-worth keeping.</p>
+worth keeping. No automated decision-making or profiling with legal effects is
+performed on it.</p>
 <p>Nothing here is archived, backed up to a third party, or exported. There is
 one database, on one machine, and deleting is deleting.</p>
 
@@ -195,12 +202,6 @@ either by switching the toggle off or by tapping <strong>Delete what I've
 shared</strong>. Either action deletes your summary from the server. Withdrawing
 is as easy as giving consent, and does not affect the lawfulness of processing
 before you withdrew.</p>
-
-<h3>How long it is kept</h3>
-<p>The server holds <strong>one summary per install</strong>, replaced whenever
-your taste meaningfully changes — not a history. It is kept until you delete it
-or until the research it supports ends, after which the data set is deleted. No
-automated decision-making or profiling with legal effects is performed on it.</p>
 
 <h2>The second thing you can choose to share</h2>
 <p>A taste vector describes <em>you</em>. It cannot say anything about one
@@ -274,13 +275,45 @@ your own account, governed by their privacy policy — not mine. I do not receiv
 that traffic, and I never see your key, which is stored in your device's
 Keychain. This is off unless you enter a key yourself.</p>
 
-<h2>Importing a coffee from a web address</h2>
-<p>If you paste a roaster's product page into the app to fill in a coffee's
-details, your device fetches that page directly from that roaster's website. That
-website will see the request as it would any visit. Nothing about you or your
-library is sent to it.</p>
+<h2 id="fetches">What the app fetches for you</h2>
+<p>Some features read public information from the internet on your behalf. Your
+device makes each request directly, the site sees it as it would any visit, and
+nothing about you or your library is sent beyond what the request itself names.
+None of these requests carries the install identifier described above.</p>
+<ul>
+  <li><strong>Importing a coffee from a web address.</strong> If you paste a
+      roaster's product page, your device fetches that page from the roaster's
+      website to fill in the coffee's details.</li>
+  <li><strong>Finding a coffee by its roaster and name.</strong> The app looks
+      the coffee up in that roaster's own online shop.</li>
+  <li><strong>Following roasters and watching saved coffees.</strong> If you
+      follow a roaster or save a coffee, the app reads that roaster's shop about
+      once a week (when you open the app, in a background refresh iOS allows, or
+      when you tap Check now) to see new coffees, prices and whether they are in
+      stock. It reads one shop at a time, a few requests each.</li>
+  <li><strong>The worldwide coffee list.</strong> About once a week the app
+      downloads a list of coffees from roasters around the world from my server.
+      The request carries no identifier and nothing from your library.</li>
+  <li><strong>Update check.</strong> The app asks my server which version is
+      current, so a test build can tell you when it is out of date.</li>
+  <li><strong>Exchange rates.</strong> To show prices in your currency, the app
+      downloads the European Central Bank's daily reference rates.</li>
+  <li><strong>Cafés.</strong> Café search uses Apple Maps, so what you search
+      for goes to Apple under Apple's privacy policy. Only <strong>Near
+      me</strong> uses your location, when you tap it, and only while the app is
+      in use. With that permission, the app also checks roughly where you are (to
+      about a kilometre) when you open it, so it can notice you are travelling;
+      that position stays on your device. To tell specialty cafés apart, the app
+      may read a café's own website.</li>
+  <li><strong>Cafés from Google Maps.</strong> If you paste a link to a saved
+      Google Maps list, your device fetches that list from Google. Files you
+      import (CSV, KML, GPX or GeoJSON) are read on your device.</li>
+</ul>
 
-<h2>Beta testing through TestFlight</h2>
+<h2>The App Store and TestFlight</h2>
+<p>If you agreed to share analytics with app developers (Settings → Privacy
+&amp; Security → Analytics &amp; Improvements), Apple shares anonymous usage and
+crash statistics with me in App Store Connect. I can't link them to you.</p>
 <p>While the app is distributed through TestFlight, Apple processes some data
 about your participation, and as the developer I can see it in App Store Connect:</p>
 <ul>
