@@ -66,7 +66,7 @@
 <main>
 
 <h1>CoffeeLab Journal — Privacy Policy</h1>
-<p class="updated">Last updated 31 October 2026</p>
+<p class="updated">Last updated 9 November 2026</p>
 
 <div class="lede">
   <p><strong>The short version.</strong> CoffeeLab Journal is a personal coffee
@@ -107,13 +107,24 @@ export a full backup file at any time from Settings.</p>
 brews and timers straight from your iPhone. Neither goes through a server.</p>
 
 <h3>Health data</h3>
-<p>With your permission, the app reads <strong>sleep</strong> from Apple Health
-so it can compare its caffeine projections against how you actually slept, and
-writes the <strong>caffeine</strong> from drinks you log back into Health. This
-exchange happens entirely on your device between the app and Apple Health. Health
-data is never transmitted anywhere, is not included in the optional taste
-sharing described below, and you can revoke access at any time in the Health app.
-The app works without Health access.</p>
+<p>With your permission, the app writes the <strong>caffeine</strong> from drinks
+you log into Apple Health. If you tap <strong>Use my weight from Health</strong>
+on <em>Your caffeine profile</em>, it also reads your most recent
+<strong>body weight</strong>, to estimate how fast your body clears caffeine.
+It reads nothing else from Health. This exchange happens entirely on your device
+between the app and Apple Health. Health data is never transmitted anywhere, is
+not included in the optional sharing described below, and you can revoke access
+at any time in the Health app. The app works without Health access.</p>
+
+<h3>Your caffeine profile</h3>
+<p>To estimate how long caffeine stays in your body, the Caffeine tab can ask
+about the things that change it: your weight, whether you smoke, hormonal
+contraception, pregnancy, a liver condition, medicines that affect caffeine,
+and, if you know it, a gene variant (CYP1A2). Every answer is optional. Like the
+rest of your data, the answers stay on your device and, if you use iCloud, in
+your own iCloud account. They are never sent to my server, are not part of the
+optional sharing, and are never included in what the optional AI features send.
+The estimate is general information, not medical advice.</p>
 
 <h2>The one thing you can choose to share</h2>
 <p>The app's distinctive feature is a <em>taste vector</em>: a standardised
@@ -149,7 +160,7 @@ sent.</p>
       themselves.)</li>
   <li>Your individual ratings — only the standardised summary derived from them</li>
   <li>Your location, the cafés you visit, or any device identifier</li>
-  <li>Any health or sleep data</li>
+  <li>Any health data, including your caffeine profile</li>
   <li>Your brew logs, timings or caffeine history</li>
 </ul>
 
@@ -271,7 +282,8 @@ transmitted.</p>
 <p>You may optionally supply <strong>your own</strong> API key for Anthropic or
 OpenAI to use a cloud model instead. If you do, the text of your question and a
 summary of your taste are sent directly from your device to that provider under
-your own account, governed by their privacy policy — not mine. I do not receive
+your own account, governed by their privacy policy — not mine. Your caffeine
+profile and any health data are never part of what is sent. I do not receive
 that traffic, and I never see your key, which is stored in your device's
 Keychain. This is off unless you enter a key yourself.</p>
 
